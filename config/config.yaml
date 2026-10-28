@@ -1,0 +1,68 @@
+#########################
+# INPUT
+#########################
+# Change the file name to match the accession list
+
+input:
+    accession_list: "config/SRR_Acc_List.txt"
+
+#########################
+# THREADS
+#########################
+
+threads:
+    megahit: 4
+    quast: 4
+    rgi: 16
+    mobileelementfinder: 4
+    genomad: 1
+    minimap2: 4
+    samtools: 4
+
+#########################
+# FASTP
+#########################
+
+fastp:
+    qualified_quality_phred: 25
+
+#########################
+# MEGAHIT
+#########################
+
+megahit:
+    memory: 0.8
+
+#########################
+# DATABASES
+#########################
+
+databases:
+    card: "resources/CARD"
+    genomad: "resources/genomad_db"
+    mobileelementfinder: "resources/MEFinderDB"
+
+#########################
+# DIRECTORY STRUCTURE
+#########################
+
+paths:
+    results: "results"
+    raw_reads: "data/raw"
+    trimmed_reads: "results/trimmed"
+    assembly: "results/assembly"
+    fastqc: "results/fastqc"
+    rgi: "results/rgi"
+    genomad: "results/genomad"
+    mobileelementfinder: "results/mobileelementfinder"
+    mapping: "results/mapping"
+    logs: "logs"
+
+#########################
+# METADATA
+#########################
+
+project:
+    name: "ARG_MGE_Water_Metagenomics"
+
+    version: 1.0

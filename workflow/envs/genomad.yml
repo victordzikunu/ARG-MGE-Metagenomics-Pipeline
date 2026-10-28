@@ -1,0 +1,9 @@
+name: genomad
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  
+dependencies:
+  - genomad
+

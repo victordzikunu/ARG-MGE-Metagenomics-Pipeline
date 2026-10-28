@@ -1,0 +1,9 @@
+name: MGE
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.8
+  - seqtk
+prefix: /home/StudentFirst/anaconda3/envs/MGE

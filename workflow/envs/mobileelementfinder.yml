@@ -1,0 +1,16 @@
+name: mobileelementfinder
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+
+dependencies:
+  - blast
+  - kma
+  - python=3.8
+  - numpy
+  - pandas
+  - pip
+  - pip:
+    - MobileElementFinder
+
