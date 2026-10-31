@@ -111,3 +111,40 @@ This will create the database in `genomad_db` directory
 Install the database using the instructions found in MobileElementFinder documentation: https://pypi.org/project/MobileElementFinder/
 
 After installation place the database files in `resources/MEFinderDB/`
+
+Input Data
+---------------
+Create input file with one accesion per line:
+```sh
+config/SRR_Acc_List.txt
+```
+
+Configuration
+---------------
+Edit config file:
+```sh
+config/config.yml
+```
+In this file you can adjust the threads used for each step and adjust parameters as you see fit.
+
+Run Pipeline
+---------------
+First perform a dry run to make sure everything is in order:
+```sh
+snakemake \
+    --snakefile workflow/Snakefile \
+    -n
+```
+
+Execute pipeline:
+```sh
+snakemake \
+    --snakefile workflow/Snakefile \
+    --use-conda \
+    --cores 32
+```
+
+Authors
+---------------
+Victor Dzikunu, Lyne Butler, Elijah Humphrey, Bradley Jonkman, and Katharine Toth
+
